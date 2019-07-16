@@ -1,253 +1,115 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Samir Rustamov</title>
-    <meta property="og:title" content="Samir Rustamov" />
-    <meta property="og:locale" content="en_US" />
-    <meta name="description" content="Samir Rustamov github.io page" />
-    <meta property="og:description" content="Samir Rustamov github.io page" />
-    <link rel="canonical" href="https://srustamov.github.io/" />
-    <meta property="og:url" content="https://srustamov.github.io/" />
-    <meta property="og:site_name" content="Samir Rustamov | Web Developer" />
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link type="application/atom+xml" rel="alternate" href="https://srustamov.github.io/feed.xml"/>
-  </head>
-  <body>
-    <div class="wait">
-      <p>Please Wait...</p>
-    </div>
-    <div class="loading">
-      <p>Loading...</p>
-    </div>
-    <div class="customAlert">
-      <p class="message"></p>
-      <button class="confirmButton">Ok</button>
-    </div>
-    <canvas id="world"></canvas>
-    <main id="container">
-        <section id="home">
-          <pre id="write-name">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Samir Rustamov</title>
+  <meta property="og:title" content="Samir Rustamov" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="Samir Rustamov github.io page" />
+  <meta property="og:description" content="Samir Rustamov github.io page" />
+  <link rel="canonical" href="https://srustamov.github.io/" />
+  <meta property="og:url" content="https://srustamov.github.io/" />
+  <meta property="og:site_name" content="Samir Rustamov | Web Developer" />
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <div class="wait">
+    <p>Please Wait...</p>
+  </div>
+  <div class="loading">
+    <p>Loading...</p>
+  </div>
+  <div class="customAlert">
+    <p class="message"></p>
+    <button class="confirmButton">Ok</button>
+  </div>
+  <canvas id="world"></canvas>
+  <main id="container">
+    <section id="home">
+      <pre id="write-name">
             <p style="font-weight: bold">
-____                  _        ____            _                            
+ ____                  _        ____            _                            
 / ___|  __ _ _ __ ___ (_)_ __  |  _ \ _   _ ___| |_ ___ _ __ ___   _____   __
 \___ \ / _` | '_ ` _ \| | '__| | |_) | | | / __| __/ _ \ '_ ` _ \ / _ \ \ / /
-___) | (_| | | | | | | | |    |  _ &lt;| |_| \__ \ ||  __/ | | | | | (_) \ V / 
+___) | (_|  | | | | | | | |    |  _  | |_| \__ \ ||  __/ | | | | | (_) \ V / 
 |____/ \__,_|_| |_| |_|_|_|    |_| \_\\__,_|___/\__\___|_| |_| |_|\___/ \_/</p>
-          </pre>
-          <h2><span>&raquo; Help? Type [command] + <kbd>Enter</kbd></span></h2>
-            <ul>
-              <li>'home' -- Thats obvious!</li>
-              <li>'talents'</li>
-              <li>'info'</li>
-              <li>'photo' -- Show Photo</li>
-              <li>'contact'</li>
-            </ul><br />
-          <p><span>Type 'help' + <kbd>Enter</kbd> -- for available commands.</span></p>
-        </section>
-        <section id="photo">
-            <h2><span>&raquo;Photo</span></h2>
-            <img src="assets/img/profile.jpg" alt="Samir Rustamov Photo" />
-        </section>
-        <section id="talents">
-          <ul class="skills-bar-container">
-            <li>
-              <div class="progressbar-title">
-                <h3>HTML5</h3>
-                <span class="percent" id="html-pourcent"></span>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progressred" id="progress-html"></span>
-              </div>
-            </li>
-            <li>
-              <div class="progressbar-title">
-                <h3>CSS / SASS</h3>
-                <span class="percent" id="css-pourcent"></span>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progressblue" id="progress-css"></span>
-              </div>
-            </li>
-            <li>
-              <div class="progressbar-title">
-                <h3>JavaScript / jQuery</h3>
-                <span class="percent" id="javascript-pourcent"></span>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progresspurple" id="progress-javascript"></span>
-              </div>
-            </li>
-            <li>
-              <div class="progressbar-title">
-                <h3>PHP</h3>
-                <span class="percent" id="php-pourcent"></span>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progressorange" id="progress-php"></span>
-              </div>
-            </li>   
-            <li>
-              <div class="progressbar-title">
-                <h3>PYTHON</h3>
-                <span class="percent" id="python-pourcent"></span>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progressorange" id="progress-python"></span>
-              </div>
-            </li>   
-            <li>
-              <div class="progressbar-title">
-                <h3>MYSQL</h3>
-                <span class="percent" id="mysql-pourcent"></span>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progressorange" id="progress-mysql"></span>
-              </div>
-            </li>
-            <li>
-              <div class="progressbar-title">
-                <h3>VUE JS</h3>
-                <span class="percent" id="vue-pourcent"></span>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progressgreen" id="progress-vue"></span>
-              </div>
-            </li>
-            <li>
-              <div class="progressbar-title">
-                <h3>Laravel Framework (Php)</h3>
-                <span class="percent" id="laravel-pourcent"></span>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progressred" id="progress-laravel"></span>
-              </div>
-            </li> 
-            <li>
-              <div class="progressbar-title">
-                <h3>Codeigniter Framework (Php)</h3>
-                <span class="percent" id="codeigniter-pourcent"></span>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progressred" id="progress-codeigniter"></span>
-              </div>
-            </li>
-            <li>
-              <div class="progressbar-title">
-                <h3>OOP (Object Oriented Programming)</h3>
-                <span class="percent" id="oop-pourcent"></span>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progressred" id="progress-oop"></span>
-              </div>
-            </li>
-            <li>
-              <div class="progressbar-title">
-                <h3>Bootstrap 4</h3>
-                <span class="percent" id="bootstrap-pourcent"></span>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progressblue" id="progress-bootstrap"></span>
-              </div>
-            </li>
-            <li>
-              <div class="progressbar-title">
-                <h3>REST API</h3>
-                <span class="percent" id="rest-pourcent"></span>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progresspurple" id="progress-rest"></span>
-              </div>
-            </li>   
-            <li>
-              <div class="progressbar-title">
-                <h3>APACHE 2</h3>
-                <span class="percent" id="apache-pourcent"></span>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progresspurple" id="progress-apache"></span>
-              </div>
-            </li>  
-            <li>
-              <div class="progressbar-title">
-                <h3>NGINX</h3>
-                <span class="percent" id="nginx-pourcent"></span>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progresspurple" id="progress-nginx"></span>
-              </div>
-            </li>
-            <li>
-              <div class="progressbar-title">
-                <h3>GIT</h3>
-                <span class="percent" id="git-pourcent"></span>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progressorange" id="progress-git"></span>
-              </div>
-            </li>
-            <li>
-              <div class="progressbar-title">
-                <h3>LINUX OS</h3>
-                <span class="percent" id="linux-pourcent"></span>
-              </div>
-              <div class="bar-container">
-                <span class="progressbar progressorange" id="progress-linux"></span>
-              </div>
-            </li>
-          </ul>
-        </section>
-        <section id="info">
-            <table>
-              <tbody>
-                <tr>
-                  <td>NAME:</td>
-                  <td style="color:#fff">SAMIR RUSTAMOV</td></tr>
-                <tr>
-                  <td>TITLE:</td>
-                  <td style="color:#fff"> WEB DEVELOPER</td></tr>
-                <tr>
-                  <td>PHONE:</td>
-                  <td><a style="color:#fff" href="tel:+994705961929">+994705961929</a></td></tr>
-                <tr>
-                  <td>E-MAIL:</td>
-                  <td><a style="color:#fff" href="mailto:rustemovv96@gmail.com">rustemovv96@gmail.com</a></td></tr>
-                <tr>
-                  <td>GITHUB:</td>
-                  <td><a style="color:#fff" href="https://github.com/srustamov" target="_blank">click here</a></td></tr>
-              </tbody>
-            </table>
-        </section>
-        <section id="contact">
-          <form id="contact-form" onsubmit="return false">
-            <span>Name:</span><input type="text" name="name" required="" />
-            <span>Email:</span><input type="email" name="email" required="" />
-            <span>Number:</span><input type="text" pattern="[0-9]+" name="number" />
-            <span>Message</span><br />
-            <textarea name="message" rows="10" cols="100" required=""></textarea>
-            <button onclick="contactSend()">send</button>
-          </form>
-        </section>
-        <section id="error">
-            <p>Command not found <br />Type help -- Enter for available commands</p>
-        </section>
-        <section id="help">
-            <p><span>Type [command] + <kbd>Enter</kbd></span></p>
-            <ul>
-            <li>'home' -- Thats obvious!</li>
-            <li>'talents'</li>
-            <li>'info'</li>
-            <li>'photo' -- Show Photo</li>
-            <li>'contact' -- Contact Me</li>
-            </ul>
-        </section>
-        <span class="command">
-            samir@rustamov:~/$ <input id="command-input" type="text" />
-        </span>
-    </main>
-    <script src='assets/js/j.js'></script>
-   <script src="assets/js/index.js"></script>
-  </body>
+      </pre>
+      <h2><span>&raquo; Help? Type [command] + <kbd>Enter</kbd></span></h2>
+      <ul>
+        <li>'home' -- Thats obvious!</li>
+        <li>'talents'</li>
+        <li>'info'</li>
+        <li>'photo' -- Show Photo</li>
+        <li>'contact'</li>
+      </ul><br />
+      <p><span>Type 'help' + <kbd>Enter</kbd> -- for available commands.</span></p>
+    </section>
+    <section id="photo">
+      <h2><span>&raquo;Photo</span></h2>
+      <img src="assets/img/profile.jpg" alt="Samir Rustamov Photo" />
+    </section>
+    <section id="talents">
+      <ul class="skills-bar-container"></ul>
+    </section>
+    <section id="info">
+      <table>
+        <tbody>
+          <tr>
+            <td>NAME:</td>
+            <td style="color:#fff">SAMIR RUSTAMOV</td>
+          </tr>
+          <tr>
+            <td>TITLE:</td>
+            <td style="color:#fff"> WEB DEVELOPER</td>
+          </tr>
+          <tr>
+            <td>PHONE:</td>
+            <td><a style="color:#fff" href="tel:+994705961929">+994705961929</a></td>
+          </tr>
+          <tr>
+            <td>E-MAIL:</td>
+            <td><a style="color:#fff" href="mailto:rustemovv96@gmail.com">rustemovv96@gmail.com</a></td>
+          </tr>
+          <tr>
+            <td>GITHUB:</td>
+            <td><a style="color:#fff" href="https://github.com/srustamov" target="_blank">click here</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="contact">
+      <form id="contact-form" onsubmit="return false">
+        <span>Name:</span><input type="text" name="name" required="" />
+        <span>Email:</span><input type="email" name="email" required="" />
+        <span>Number:</span><input type="text" pattern="[0-9]+" name="number" />
+        <span>Message</span><br />
+        <textarea name="message" rows="10" cols="100" required=""></textarea>
+        <button onclick="contactSend()">send</button>
+      </form>
+    </section>
+    <section id="error">
+      <p>Command not found <br />Type help -- Enter for available commands</p>
+    </section>
+    <section id="help">
+      <p><span>Type [command] + <kbd>Enter</kbd></span></p>
+      <ul>
+        <li>'home' -- Thats obvious!</li>
+        <li>'talents'</li>
+        <li>'info'</li>
+        <li>'photo' -- Show Photo</li>
+        <li>'contact' -- Contact Me</li>
+      </ul>
+    </section>
+    <span class="command">
+      samir@rustamov:~/$ <input id="command-input" type="text" />
+    </span>
+  </main>
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/index.js"></script>
+</body>
+
 </html>
